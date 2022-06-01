@@ -8,5 +8,43 @@
 </head>
 <body>
     
+    <script>
+
+        function computerPlay(){
+            let computerMove = Math.floor(Math.random() * 10)
+            if (computerMove < 4) {
+                return 'Rock'
+            } else if (computerMove > 3 && computerMove < 7) {
+                return 'Paper'
+            } else {
+                return 'Scissors'
+            }
+        }
+
+        function play(playerSelection) {
+
+            let computerSelection = Math.floor(Math.random() * 10)
+            if (computerSelection < 4) {
+                computerSelection = 'Rock'
+            } else if (computerSelection > 3 && computerSelection < 7) {
+                computerSelection =  'Paper'
+            } else {
+                computerSelection = 'Scissors'
+            }
+
+            if (((playerSelection === 'Rock') && (computerSelection === 'Scissors')) || ((playerSelection === 'Paper') && (computerSelection === 'Rock'))|| ((playerSelection === 'Scissors') && (computerSelection === 'Paper'))){
+                return 'Player wins!'
+            } else if (((playerSelection === 'Rock') && (computerSelection === 'Paper')) || ((playerSelection === 'Paper') && (computerSelection === 'Scissors'))|| ((playerSelection === 'Scissors') && (computerSelection === 'Rock'))){
+                return 'Player loses!'
+            } else {
+                return 'Draw!'
+            }
+
+
+        }
+
+    </script>
+
+
 </body>
 </html>
