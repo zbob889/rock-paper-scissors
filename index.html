@@ -21,7 +21,7 @@
             }
         }
 
-        function play(playerSelection) {
+        function playRound(playerSelection) {
 
             let computerSelection = Math.floor(Math.random() * 10)
             if (computerSelection < 4) {
@@ -32,9 +32,9 @@
                 computerSelection = 'Scissors'
             }
 
-            if (((playerSelection === 'Rock') && (computerSelection === 'Scissors')) || ((playerSelection === 'Paper') && (computerSelection === 'Rock'))|| ((playerSelection === 'Scissors') && (computerSelection === 'Paper'))){
+            if (((playerSelection.toLowerCase() === 'rock') && (computerSelection === 'Scissors')) || ((playerSelection.toLowerCase() === 'paper') && (computerSelection === 'Rock'))|| ((playerSelection.toLowerCase() === 'scissors') && (computerSelection === 'Paper'))){
                 return 'Player wins!'
-            } else if (((playerSelection === 'Rock') && (computerSelection === 'Paper')) || ((playerSelection === 'Paper') && (computerSelection === 'Scissors'))|| ((playerSelection === 'Scissors') && (computerSelection === 'Rock'))){
+            } else if (((playerSelection.toLowerCase() === 'rock') && (computerSelection === 'Paper')) || ((playerSelection.toLowerCase() === 'paper') && (computerSelection === 'Scissors'))|| ((playerSelection.toLowerCase() === 'scissors') && (computerSelection === 'Rock'))){
                 return 'Player loses!'
             } else {
                 return 'Draw!'
