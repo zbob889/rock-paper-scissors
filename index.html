@@ -44,26 +44,8 @@
 
         function game() {
             for (let i = 0; i < 5; i++) {
-            
+
                 let playerSelection = prompt('Rock, Paper, or Scissors?');
-
-                let computerSelection = Math.floor(Math.random() * 10)
-            if (computerSelection < 4) {
-                computerSelection = 'Rock'
-            } else if (computerSelection > 3 && computerSelection < 7) {
-                computerSelection =  'Paper'
-            } else {
-                computerSelection = 'Scissors'
-            }
-
-            if (((playerSelection.toLowerCase() === 'rock') && (computerSelection === 'Scissors')) || ((playerSelection.toLowerCase() === 'paper') && (computerSelection === 'Rock'))|| ((playerSelection.toLowerCase() === 'scissors') && (computerSelection === 'Paper'))){
-                return 'Player wins!'
-            } else if (((playerSelection.toLowerCase() === 'rock') && (computerSelection === 'Paper')) || ((playerSelection.toLowerCase() === 'paper') && (computerSelection === 'Scissors'))|| ((playerSelection.toLowerCase() === 'scissors') && (computerSelection === 'Rock'))){
-                return 'Player loses!'
-            } else {
-                return 'Draw!'
-            }
-
             }
         }
     </script>
