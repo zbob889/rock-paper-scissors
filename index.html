@@ -57,18 +57,48 @@
                 };
 
                 if (((playerSelection.toLowerCase() === 'rock') && (computerSelection === 'Scissors')) || ((playerSelection.toLowerCase() === 'paper') && (computerSelection === 'Rock'))|| ((playerSelection.toLowerCase() === 'scissors') && (computerSelection === 'Paper'))){
-                console.log('Player wins!')
+                    if (i === 0) {
+                        console.log('Play wins round 1!')
+                    } else if (i === 1) {
+                        console.log('Player wins round 2!')
+                    } else if (i === 2) {
+                        console.log('Player wins round 3!')
+                    } else if (i === 3) {
+                        console.log('Player wins round 4!')
+                    } else {
+                        console.log('Player wins round 5!')
+                    }
                 } else if (((playerSelection.toLowerCase() === 'rock') && (computerSelection === 'Paper')) || ((playerSelection.toLowerCase() === 'paper') && (computerSelection === 'Scissors'))|| ((playerSelection.toLowerCase() === 'scissors') && (computerSelection === 'Rock'))){
-                console.log('Player loses!')
+                    if (i === 0) {
+                        console.log('Play loses round 1!')
+                    } else if (i === 1) {
+                        console.log('Player loses round 2!')
+                    } else if (i === 2) {
+                        console.log('Player loses round 3!')
+                    } else if (i === 3) {
+                        console.log('Player loses round 4!')
+                    } else {
+                        console.log('Player loses round 5!')
+                    }
                 } else {
-                console.log('Draw!')
+                    if (i === 0) {
+                        console.log('Round 1 is a draw!')
+                    } else if (i === 1) {
+                        console.log('Round 2 is a draw!')
+                    } else if (i === 2) {
+                        console.log('Round 3 is a draw!')
+                    } else if (i === 3) {
+                        console.log('Round 4 is a draw!')
+                    } else {
+                        console.log('Round 5 is a draw!')
+                    }
                 };
 
 
             }
         }
+
+        
     </script>
-
-
 </body>
 </html>
