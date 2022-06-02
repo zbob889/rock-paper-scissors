@@ -42,7 +42,7 @@
         }
 
 
-        function game() {
+        function game() { 
             for (let i = 0; i < 5; i++) {
 
                 let playerScore = 0
@@ -73,15 +73,15 @@
                     }
                 } else if (((playerSelection.toLowerCase() === 'rock') && (computerSelection === 'Paper')) || ((playerSelection.toLowerCase() === 'paper') && (computerSelection === 'Scissors'))|| ((playerSelection.toLowerCase() === 'scissors') && (computerSelection === 'Rock'))){
                     if (i === 0) {
-                        console.log('Play loses round 1!') && computerScore++
+                        console.log('Play loses round 1!') && playerScore++
                     } else if (i === 1) {
-                        console.log('Player loses round 2!') && computerScore++
+                        console.log('Player loses round 2!') && playerScore++
                     } else if (i === 2) {
-                        console.log('Player loses round 3!') && computerScore++
+                        console.log('Player loses round 3!') && playerScore++
                     } else if (i === 3) {
-                        console.log('Player loses round 4!') && computerScore++
+                        console.log('Player loses round 4!') && playerScore++
                     } else {
-                        console.log('Player loses round 5!') && computerScore++
+                        console.log('Player loses round 5!') && playerScore++
                     }
                 } else {
                     if (i === 0) {
@@ -96,6 +96,9 @@
                         console.log('Round 5 is a draw!')
                     }
                 }
+                
+                console.log(playerScore)
+                console.log(computerScore)
 
                 if (i === 4) {
                     if (playerScore > computerScore) {
