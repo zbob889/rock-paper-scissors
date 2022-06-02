@@ -45,7 +45,10 @@
         function game() {
             for (let i = 0; i < 5; i++) {
 
-                let playerSelection = prompt('Rock, Paper, or Scissors?');
+                let playerScore = 0
+                let computerScore = 0
+
+                let playerSelection = prompt('Rock, Paper, or Scissors?')
 
                 let computerSelection = Math.floor(Math.random() * 10)
                 if (computerSelection < 4) {
@@ -54,31 +57,31 @@
                 computerSelection =  'Paper'
                 } else {
                 computerSelection = 'Scissors'
-                };
+                }
 
                 if (((playerSelection.toLowerCase() === 'rock') && (computerSelection === 'Scissors')) || ((playerSelection.toLowerCase() === 'paper') && (computerSelection === 'Rock'))|| ((playerSelection.toLowerCase() === 'scissors') && (computerSelection === 'Paper'))){
                     if (i === 0) {
-                        console.log('Play wins round 1!')
+                        console.log('Play wins round 1!') && playerScore++
                     } else if (i === 1) {
-                        console.log('Player wins round 2!')
+                        console.log('Player wins round 2!') && playerScore++
                     } else if (i === 2) {
-                        console.log('Player wins round 3!')
+                        console.log('Player wins round 3!') && playerScore++
                     } else if (i === 3) {
-                        console.log('Player wins round 4!')
+                        console.log('Player wins round 4!') && playerScore++
                     } else {
-                        console.log('Player wins round 5!')
+                        console.log('Player wins round 5!') && playerScore++
                     }
                 } else if (((playerSelection.toLowerCase() === 'rock') && (computerSelection === 'Paper')) || ((playerSelection.toLowerCase() === 'paper') && (computerSelection === 'Scissors'))|| ((playerSelection.toLowerCase() === 'scissors') && (computerSelection === 'Rock'))){
                     if (i === 0) {
-                        console.log('Play loses round 1!')
+                        console.log('Play loses round 1!') && computerScore++
                     } else if (i === 1) {
-                        console.log('Player loses round 2!')
+                        console.log('Player loses round 2!') && computerScore++
                     } else if (i === 2) {
-                        console.log('Player loses round 3!')
+                        console.log('Player loses round 3!') && computerScore++
                     } else if (i === 3) {
-                        console.log('Player loses round 4!')
+                        console.log('Player loses round 4!') && computerScore++
                     } else {
-                        console.log('Player loses round 5!')
+                        console.log('Player loses round 5!') && computerScore++
                     }
                 } else {
                     if (i === 0) {
@@ -92,8 +95,17 @@
                     } else {
                         console.log('Round 5 is a draw!')
                     }
-                };
+                }
 
+                if (i === 4) {
+                    if (playerScore > computerScore) {
+                        console.log('Player wins the game!')
+                    } else if (computerScore > playerScore) {
+                        console.log('Player loses the game!')
+                    } else {
+                        console.log('Player draws with the computer!')
+                    }
+                }
 
             }
         }
